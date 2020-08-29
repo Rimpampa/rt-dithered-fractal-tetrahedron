@@ -1,0 +1,12 @@
+[package]
+name = "rt-dithered-fractal-tetrahedron"
+version = "0.1.0"
+authors = ["Rimpampa <riccardo.ripanti01@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+glutin = "0.24.1"
+gl = "0.14.0"
+num_cpus = "1.13.0"
