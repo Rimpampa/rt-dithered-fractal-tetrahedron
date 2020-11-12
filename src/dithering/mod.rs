@@ -9,11 +9,6 @@ use worker::{ScopedWorkerPool, Worker};
 pub use color::{Color, Palette};
 pub use worker::WorkerPool;
 
-#[allow(clippy::cast_ref_to_mut, clippy::mut_from_ref)]
-unsafe fn ref_to_mut_ref<T: ?Sized>(val: &T) -> &mut T {
-    &mut *(val as *const T as *mut T)
-}
-
 pub fn dither<'a, 'b: 'a, T: BorrowMut<[Color<'b>]> + 'a>(
     data: &'a mut T,
     width: usize,
